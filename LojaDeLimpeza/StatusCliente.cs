@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LojaDeLimpeza
 {
-    public class Class1
+    public class StatusCliente
     {
+        public string DescricaoStatusCliente { get; set; }
     }
 }
