@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78E95A2E-94C2-4068-B039-65A756C39295}</ProjectGuid>
+    <ProjectGuid>{48470E92-6EE1-4D0E-8913-45AF1E816D3B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LojaDeLimpeza</RootNamespace>
@@ -106,9 +106,19 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="StatusCliente.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Contato.cs" />
+    <Compile Include="Endereco.cs" />
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="ItemPedido.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\LojaDeLimpeza.rd.xml" />
+    <Compile Include="StatusCliente.cs" />
+    <Compile Include="StatusFornecedor.cs" />
+    <Compile Include="StatusPedido.cs" />
+    <EmbeddedResource Include="Properties\ExercicioComplementar2.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">

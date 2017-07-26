@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LojaDeLimpeza
 {
-    class StatusCliente
+    class StatusPedido
     {
         public int IdStatus { get; set; }
 
