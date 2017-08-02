@@ -118,7 +118,6 @@
     <Compile Include="StatusCliente.cs" />
     <Compile Include="StatusFornecedor.cs" />
     <Compile Include="StatusPedido.cs" />
-    <EmbeddedResource Include="Properties\ExercicioComplementar2.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
