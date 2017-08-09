@@ -13,6 +13,14 @@ namespace LojaDeLimpeza.Domain
         public string Nome { get; set; }
         #endregion
 
+        #region constructor
+        public Categoria(int id, string nome)
+        {
+            this.Id = id;
+            this.Nome = nome;
+        }
+        #endregion
+
         #region methods
         #endregion
     }

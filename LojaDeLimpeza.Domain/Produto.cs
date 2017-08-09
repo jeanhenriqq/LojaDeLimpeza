@@ -9,7 +9,7 @@ namespace LojaDeLimpeza.Domain
     public class Produto
     {
         #region properties
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string Nome { get; set; }
         public DateTime DataFabricacao { get; set; }
         public DateTime DataValidade { get; set; }
@@ -20,6 +20,23 @@ namespace LojaDeLimpeza.Domain
 
         #endregion
 
+        #region constructor
+        public Produto(int id, string nome, DateTime dataFabricacao, Categoria categoria, decimal preco, int quantidadeEmEstoque)
+        {
+
+            ValidaPreco(preco);
+            ValidaQuantidadeEmEstoque(quantidadeEmEstoque);
+
+            this.Id = id;
+            this.Nome = nome;
+            this.DataFabricacao = dataFabricacao;
+            this.Categoria = categoria;
+            this.Preco = preco;
+            this.QuantidadeEmEstoque = quantidadeEmEstoque;
+        }
+
+        #endregion
+        
         #region methods
         public void AdcionarEstoque(int quantidade)
         {
@@ -44,7 +61,30 @@ namespace LojaDeLimpeza.Domain
                 throw new Exception("Quantidade deve ser maior do que zero");
             }
         }
+
+        private bool ValidaPreco(decimal preco)
+        {
+            if( preco > 0)
+            {
+                return true;
+            }
+            else
+            {
+                throw new Exception("O preço deve ser maior do que zero");
+            }
+        }
         
+        private bool ValidaQuantidadeEmEstoque(int quantidadeEmEstoque)
+        {
+            if(quantidadeEmEstoque > 0)
+            {
+                return true;
+            }
+            else
+            {
+                throw new Exception("A quantidade deve ser maior do que zero");
+            }
+        }
         #endregion
     }
 }
